@@ -1,0 +1,20 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+namespace: ingress
+labels:
+  - pairs:
+      app: cloudflared
+    includeSelectors: true
+resources:
+- deployment.yml
+
+secretGenerator:
+- name: cf
+  files:
+  - credentials.json=bc62bfef-da16-42e1-8bb9-18bd2d6ccc7e.json
+
+configMapGenerator:
+- name: cf
+  files:
+  - config.yml
