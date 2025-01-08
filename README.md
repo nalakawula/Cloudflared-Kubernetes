@@ -24,16 +24,16 @@ Copy the json to this directory
 cp /home/User/.cloudflared/{uuid}.json .
 ```
 
-Replace {uuid} inside kustomization.yml with yours.
+Replace {uuid} inside `kustomization.yml` with yours.
 
 Update the ingress part in the `config.yml`.
-For example i want to route ghost.my-domain.tld
+For example i want to route `ghost.kube.my.id`
 
 ```yml
 tunnel: k3s
 credentials-file: /etc/cloudflared/creds/credentials.json
 ingress:
-- hostname: ghost.my-domain.tld
+- hostname: ghost.kube.my.id
   service: http://ghost-svc.ghost.svc.cluster.local
 - service: http_status:404
 ```

@@ -5,7 +5,7 @@ credentials-file: /etc/cloudflared/creds/credentials.json
 # E.g. `cloudflared tunnel route dns example-tunnel tunnel.example.com`.
 ingress:
 # To target service inside k8s, use this pattern: service: http://service-name.service-namespace.svc.cluster.local
-- hostname: ghost.my-domain.tld
+- hostname: ghost.kube.my.id
   service: http://ghost-svc.ghost.svc.cluster.local
 # Catch all
 - service: http_status:404
