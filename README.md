@@ -24,6 +24,8 @@ Copy the json to this directory
 cp /home/User/.cloudflared/{uuid}.json .
 ```
 
+Replace {uuid} inside kustomization.yml with yours.
+
 Update the ingress part in the `config.yml`.
 For example i want to route ghost.my-domain.tld
 
